@@ -13,7 +13,7 @@ This checklist tracks release preparation for the independent Skillsmo skills li
 - The repository-level validator and GitHub Actions workflow are present. Clean-history validation runs passed on the public main branch.
 - Main descends from the reviewed root commit, which has no parent and uses GitHub's privacy-preserving commit identity. No prior history is reachable through the published branch.
 - GitHub reports one branch, `main`. No tags or versioned releases were created.
-- The three pre-clean-history Actions runs were permanently deleted. The five validation runs created during clean-history release and documentation updates all completed successfully.
+- The three pre-clean-history Actions runs were permanently deleted. At this checklist audit, all eight clean-history runs (runs 4–11) had passed; the live workflow page records subsequent runs.
 - GitHub's private email setting is enabled.
 - The public repository page displays the Skillsmo README, MIT license, About description, and project topics.
 - No agent definitions or runtime are included. Host installation and behavior evaluations remain unperformed; all packages remain experimental.
@@ -33,9 +33,9 @@ This checklist tracks release preparation for the independent Skillsmo skills li
 - [ ] Run `npx skills add helx0071/skillsmo --list` and representative install smoke checks in disposable projects.
 - [ ] Record Node, CLI, and host versions, selected skills, observed results, and limitations.
 
-## First public installation smoke check
+## Post-publication installation smoke checks
 
-After publication:
+Next steps:
 
 1. List packages with `npx skills add helx0071/skillsmo --list` and compare with [SKILL_INDEX.md](../SKILL_INDEX.md).
 2. Install a representative skill to Codex and OpenCode in disposable projects.
