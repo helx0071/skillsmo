@@ -37,18 +37,21 @@
 
 **Acceptance:** inconsistent package/catalog/link changes fail with actionable messages. A green static check is not described as host compatibility or behavior quality.
 
-## Phase 3 — Host discovery and behavior evaluation
+## Phase 3 — Distribution and host behavior
 
-**Status: no evaluations recorded**
+**Status: direct listing/install smoke passed; host behavior evaluation pending**
 
-- [ ] Choose a representative risk-based pilot across interface design, backend/API work, SEO, writing, security, and media.
-- [ ] Define ordinary, ambiguous, edge/failure, and out-of-scope tasks with observable expected outcomes.
-- [ ] Install and evaluate packages separately in Codex, OpenCode, Claude Code, and Hermes Agent.
-- [ ] Record host/version, installation route, trigger behavior, reference loading, available tools, task result, evidence, and limitations.
-- [ ] Expand package coverage based on risk, usage, and observed gaps.
-- [ ] Change maturity or compatibility claims only for the host/version and task boundary actually evaluated.
+- [x] Record a public Skills CLI listing and copied install of one representative package in a disposable Codex-target project.
+- [x] Confirm the selected skill, both supporting references, and CLI lock entry are present after install.
+- [ ] Choose a risk-based behavior pilot across interface design, backend/API work, SEO, writing, security, and media.
+- [ ] Define ordinary, ambiguous, edge/failure, and out-of-scope tasks with observable expected outcomes before running each case.
+- [ ] Evaluate skills in Codex, OpenCode, Claude Code, and Hermes Agent separately. Installation alone does not count as behavior evaluation.
+- [ ] Record host/version, CLI version, trigger behavior, reference loading, available tools, exact task, result, evidence, and limitations.
+- [ ] Check skills.sh or other registry indexing separately from direct GitHub installation.
 
-**Acceptance:** results can be reproduced from a package revision, host/version, task, rubric, and observed evidence. Installation alone does not count as behavior evaluation.
+The Codex CLI attempt in the smoke environment stopped before model invocation because the managed environment's state database was read-only. OpenCode, Claude Code, and Hermes Agent executables were absent. Preserve this as a blocked run, not a failed skill evaluation. See [the evaluation guide](evaluation-runs/README.md) and [the public install smoke report](evaluation-runs/2026-11-12-public-install-smoke.md).
+
+**Acceptance:** behavior results can be reproduced from a package revision, host/version, exact task, rubric, and observed evidence. File transfer or one passing example is not universal reliability.
 
 ## Phase 4 — Coverage and skill quality
 
