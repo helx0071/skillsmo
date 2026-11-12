@@ -15,8 +15,8 @@
 | Research register | 74 source records. |
 | Static validation | Implemented at `scripts/validate-skills.mjs`. Checks package metadata, catalog and source consistency, declared references, and relative Markdown links. |
 | Continuous integration | The latest clean-history run on public `main` passed. See the [validation workflow](https://github.com/helx0071/skillsmo/actions/workflows/validate-skills.yml). |
-| Distribution smoke check | Vercel Skills CLI 1.8.1 listed 77 packages and copied one selected package plus references to a disposable Codex target. See the [run record](evaluation-runs/2026-11-12-public-install-smoke.md). |
-| Host behavior verification | Zero Skillsmo packages have a recorded task evaluation in a named host/version. |
+| Distribution smoke check | Vercel Skills CLI 1.8.1 listed all 77 packages. A follow-up cloud run verified four Codex-target copy installs, references, lock records, and catalog name parity. See both the [public install smoke](evaluation-runs/2026-11-12-public-install-smoke.md) and [cloud evaluation](evaluation-runs/2026-11-12-cloud-workspace-install-behavior.md). |
+| Host behavior verification | Zero Skillsmo packages have a completed task behavior evaluation in a named host/version. Codex stopped before model invocation; other tested hosts were unavailable. |
 | Distribution | [Repository is public](https://github.com/helx0071/skillsmo). Installation uses the external Vercel Skills CLI; Skillsmo does not ship an npm CLI or runtime. |
 | Release activity | Clean root history is published. No versioned release or tag has been created. |
 
@@ -30,13 +30,13 @@
 - Replaced the previous reachable history with a verified clean root commit after enabling GitHub's private email setting. The three pre-clean-history Actions runs were deleted before publication.
 - Published the repository and reconciled the public catalog, implementation status, roadmap, and release checklist.
 - Confirmed successful validator runs on the clean public main history.
-- Smoke-tested public listing, Codex-target package copying, reference files, and lock tracking in a disposable project.
+- Verified public listing of all 77 skills and copy installation of four representative packages, including their references and lock tracking, in disposable projects. The cloud run independently matched the CLI listing to the catalog and compared installed files with the tested checkout.
 
 ## Still open
 
 ### Host behavior evaluation
 
-No host installations have a recorded task behavior evaluation. The Codex CLI was present, but its task attempt stopped before model invocation because the managed environment's Codex state database was read-only. OpenCode, Claude Code, and Hermes Agent runtimes were not available. Retry in writable host environments and record exact host/version, trigger behavior, reference loading, available tools, task result, evidence, and limitations. See the [evaluation run guide](evaluation-runs/README.md) and [current smoke report](evaluation-runs/2026-11-12-public-install-smoke.md).
+No host produced a completed task behavior result. The cloud run attempted a UI task with Codex, but `codex exec` failed before model invocation because the managed environment's state database was read-only. Skill loading and task output were not observed; backend, SEO, and humanizer tasks were not submitted. OpenCode, Claude Code, and Hermes Agent runtimes were unavailable. Retry in writable host environments and record exact host/version, trigger behavior, reference loading, available tools, task result, evidence, and limitations. See the [evaluation run guide](evaluation-runs/README.md), [initial public install smoke](evaluation-runs/2026-11-12-public-install-smoke.md), and [four-package cloud run](evaluation-runs/2026-11-12-cloud-workspace-install-behavior.md).
 
 ### Registry indexing
 
