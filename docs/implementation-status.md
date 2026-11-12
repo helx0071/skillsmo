@@ -14,9 +14,9 @@
 | Optional skill resources | No package-level scripts, assets, or examples are present. The repository-level validator is not part of any installable skill. |
 | Research register | 74 source records. |
 | Static validation | Implemented at `scripts/validate-skills.mjs`. Checks package metadata, catalog and source consistency, declared references, and relative Markdown links. |
-| Continuous integration | `.github/workflows/validate-skills.yml` runs the validator on pull requests and pushes to `main`. Check the latest clean-history run before treating the release validation as complete. |
+| Continuous integration | The latest clean-history run on public `main` passed. See the [validation workflow](https://github.com/helx0071/skillsmo/actions/workflows/validate-skills.yml). |
 | Host verification | Zero Skillsmo packages have a recorded install and task evaluation in a named host/version. |
-| Distribution | Repository is public. Installation uses the external Vercel Skills CLI; Skillsmo does not ship an npm CLI or runtime. |
+| Distribution | [Repository is public](https://github.com/helx0071/skillsmo). Installation uses the external Vercel Skills CLI; Skillsmo does not ship an npm CLI or runtime. |
 | Release activity | Clean root history is published. No versioned release or tag has been created. |
 
 ## Completed
@@ -27,21 +27,18 @@
 - Removed the identical five-question review checklist and generic reporting paragraph from all 77 field guides. The remaining field-guide text is task-specific practical guidance.
 - Added a dependency-free repository validator and a pull-request/push workflow.
 - Replaced the previous reachable history with a verified clean root commit after enabling GitHub's private email setting. The three pre-clean-history Actions runs were deleted before publication.
-- Published the repository as public. The release checklist records the history and privacy audit.
+- Published the repository and reconciled the public catalog, implementation status, roadmap, and release checklist.
+- Confirmed a successful validator run on the clean public main history.
 
 ## Still open
-
-### Clean-history validation
-
-The validator and workflow are present. The historical successful runs were deleted during release cleanup. Verify the latest run on the published clean history in GitHub Actions and record its result in the [release checklist](public-release-checklist.md). A static pass does not establish host compatibility or behavior quality.
-
-### Host evaluation
-
-No host installations or behavioral evaluations are recorded. Evaluate representative packages in suitable versions of Codex, OpenCode, Claude Code, and Hermes Agent. Record each host/version, install route, trigger behavior, reference loading, available tools, task result, evidence, and limitations before changing any compatibility claim. All packages remain experimental.
 
 ### Distribution smoke check
 
 Run `npx skills add helx0071/skillsmo --list` and install representative packages in disposable projects. Record the CLI and host versions, selected packages, observed results, and limitations. Direct repository installation and skills.sh indexing are separate outcomes.
+
+### Host evaluation
+
+No host installations or behavioral evaluations are recorded. Evaluate representative packages in suitable versions of Codex, OpenCode, Claude Code, and Hermes Agent. Record each host/version, install route, trigger behavior, reference loading, available tools, task result, evidence, and limitations before changing any compatibility claim. All packages remain experimental.
 
 ### Future package work
 
