@@ -1,0 +1,674 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-12",
+  "repository": "helx0071/skillsmo",
+  "sourcePolicy": "Public sources are research inputs only. No upstream skill content or assets are redistributed. The repository MIT license covers original Skillsmo-authored material only; see docs/licensing-and-attribution.md.",
+  "sources": [
+    {
+      "id": "agent-skills-spec",
+      "title": "Agent Skills specification",
+      "url": "https://agentskills.io/specification",
+      "kind": "standard",
+      "revision": "Living specification; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "No content reproduced; used to shape portable folder and manifest conventions."
+    },
+    {
+      "id": "ameenmo-humanize",
+      "title": "ameenmo humanize skill",
+      "url": "https://github.com/ameenmo/humanize-skill/tree/9066409eb92c48fe365a58c998f695185253aae0",
+      "kind": "open-source-skill",
+      "revision": "MIT; commit 9066409eb92c48fe365a58c998f695185253aae0 (2026-09-13)",
+      "checkedAt": "2026-11-12",
+      "decision": "Research-only: adopted reader-focused editing principle independently; no rules, pattern list, or text copied."
+    },
+    {
+      "id": "anthropic-frontend",
+      "title": "Anthropic frontend design skill collection",
+      "url": "https://github.com/anthropics/skills/tree/2c5958ecac7cee2b583967a2c4981d0f4a75c579",
+      "kind": "open-source-skill",
+      "revision": "Apache-2.0 at reviewed package revision; commit 2c5958ecac7cee2b583967a2c4981d0f4a75c579",
+      "checkedAt": "2026-11-12",
+      "decision": "Research-only; no package content copied."
+    },
+    {
+      "id": "anthropic-skill-best-practices",
+      "title": "Claude skill authoring best practices",
+      "url": "https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices",
+      "kind": "official-doc",
+      "revision": "Living documentation; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Used for task-focused instructions, progressive disclosure, and optional supporting files. Host runtime still requires separate verification."
+    },
+    {
+      "id": "anthropic-skill-overview",
+      "title": "Claude Agent Skills overview",
+      "url": "https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview",
+      "kind": "official-doc",
+      "revision": "Living documentation; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Confirms filesystem-based skills and staged loading. Does not establish Skillsmo compatibility with Claude hosts."
+    },
+    {
+      "id": "apple-store",
+      "title": "App Store Connect Help",
+      "url": "https://developer.apple.com/help/app-store-connect/",
+      "kind": "official-doc",
+      "revision": "Living docs; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Use current submission and release process."
+    },
+    {
+      "id": "asvs",
+      "title": "OWASP Application Security Verification Standard",
+      "url": "https://owasp.org/www-project-application-security-verification-standard/",
+      "kind": "security-standard",
+      "revision": "Living project; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Use a named version and scoped requirements."
+    },
+    {
+      "id": "b12-agentic-seo",
+      "title": "B12 agentic SEO skill",
+      "url": "https://github.com/B12Labs/skills/tree/dba5858480240029bd2e82636f0b1d025f47f855",
+      "kind": "open-source-skill",
+      "revision": "MIT repository; commit dba5858480240029bd2e82636f0b1d025f47f855 (2026-04-15); linked materials may have separate rights",
+      "checkedAt": "2026-11-12",
+      "decision": "Reviewed as a broad suite with specialist-agent definitions and many scripts; excluded from Skillsmo synthesis to preserve skills-only scope and avoid importing code or linked content."
+    },
+    {
+      "id": "c4",
+      "title": "C4 model",
+      "url": "https://c4model.com/",
+      "kind": "model-reference",
+      "revision": "Living documentation; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Architecture diagram model reference."
+    },
+    {
+      "id": "changelog",
+      "title": "Keep a Changelog",
+      "url": "https://keepachangelog.com/en/1.1.0/",
+      "kind": "format-reference",
+      "revision": "1.1.0; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Changelog convention reference."
+    },
+    {
+      "id": "convex",
+      "title": "Convex documentation",
+      "url": "https://docs.convex.dev/",
+      "kind": "official-doc",
+      "revision": "Living docs; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Use installed SDK and deployment configuration."
+    },
+    {
+      "id": "expo",
+      "title": "Expo documentation",
+      "url": "https://docs.expo.dev/",
+      "kind": "official-doc",
+      "revision": "SDK-versioned docs; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Select installed SDK and target platforms."
+    },
+    {
+      "id": "fastapi",
+      "title": "FastAPI documentation",
+      "url": "https://fastapi.tiangolo.com/",
+      "kind": "official-doc",
+      "revision": "Living docs; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Framework reference; inspect installed dependencies and ASGI lifecycle."
+    },
+    {
+      "id": "ffmpeg-docs",
+      "title": "FFmpeg documentation index",
+      "url": "https://ffmpeg.org/documentation.html",
+      "kind": "official-doc",
+      "revision": "Nightly-generated; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Use documentation matching installed FFmpeg/FFprobe version."
+    },
+    {
+      "id": "ffmpeg-filters",
+      "title": "FFmpeg filters documentation",
+      "url": "https://ffmpeg.org/ffmpeg-filters.html",
+      "kind": "official-doc",
+      "revision": "Nightly-generated; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Filter graph syntax and available filter reference."
+    },
+    {
+      "id": "ffmpeg-skill",
+      "title": "kajisho5 FFmpeg skill",
+      "url": "https://github.com/kajisho5/ffmpeg-skill/tree/ba449b0b036a75ab20e79d1658ecc3b158fe2ea6",
+      "kind": "open-source-skill",
+      "revision": "MIT; commit ba449b0b036a75ab20e79d1658ecc3b158fe2ea6 (2026-11-12)",
+      "checkedAt": "2026-11-12",
+      "decision": "Research-only; no scripts, MCP tools, examples, or assets copied."
+    },
+    {
+      "id": "git",
+      "title": "Git documentation",
+      "url": "https://git-scm.com/docs",
+      "kind": "official-doc",
+      "revision": "Living docs; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Command and behavior reference."
+    },
+    {
+      "id": "github-community-health",
+      "title": "GitHub healthy contributions and community files",
+      "url": "https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions",
+      "kind": "official-guidance",
+      "revision": "Living documentation; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Used to structure contribution, conduct, security, and public-repository readiness guidance."
+    },
+    {
+      "id": "github-email-privacy",
+      "title": "GitHub email addresses and commit attribution",
+      "url": "https://docs.github.com/en/account-and-profile/reference/email-addresses-reference",
+      "kind": "official-guidance",
+      "revision": "Living documentation; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Used to add a release gate for author and committer email metadata; privacy settings do not change email addresses already recorded in commits."
+    },
+    {
+      "id": "github-pr",
+      "title": "GitHub pull request documentation",
+      "url": "https://docs.github.com/en/pull-requests",
+      "kind": "official-doc",
+      "revision": "Living docs; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Current review and merge behavior reference."
+    },
+    {
+      "id": "github-public-visibility",
+      "title": "Setting repository visibility",
+      "url": "https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/setting-repository-visibility",
+      "kind": "official-guidance",
+      "revision": "Living documentation; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Used to review public visibility implications, including the exposure of Actions history and logs."
+    },
+    {
+      "id": "google-people-first",
+      "title": "Google people-first content guidance",
+      "url": "https://developers.google.com/search/docs/fundamentals/creating-helpful-content",
+      "kind": "official-policy",
+      "revision": "Living docs; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Content self-assessment guidance; not a ranking formula."
+    },
+    {
+      "id": "google-play",
+      "title": "Google Play Console Help",
+      "url": "https://support.google.com/googleplay/android-developer/",
+      "kind": "official-doc",
+      "revision": "Living docs; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Use current publishing policy and testing requirements."
+    },
+    {
+      "id": "google-search",
+      "title": "Google Search Central",
+      "url": "https://developers.google.com/search/docs/essentials",
+      "kind": "official-policy",
+      "revision": "Living docs; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Search eligibility, spam policy, and best-practice source."
+    },
+    {
+      "id": "google-spam",
+      "title": "Google Search spam policies",
+      "url": "https://developers.google.com/search/docs/essentials/spam-policies",
+      "kind": "official-policy",
+      "revision": "Living docs; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Policy source; recheck before publication."
+    },
+    {
+      "id": "google-structured-data",
+      "title": "Google structured data policies",
+      "url": "https://developers.google.com/search/docs/appearance/structured-data/sd-policies",
+      "kind": "official-policy",
+      "revision": "Living docs; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Feature-specific eligibility and quality requirements; no rich-result guarantee."
+    },
+    {
+      "id": "hallmark",
+      "title": "Hallmark frontend skill",
+      "url": "https://github.com/Nutlope/hallmark/tree/04977e15f3dfd6ee4b74c887dac3eb52665d6c92",
+      "kind": "open-source-skill",
+      "revision": "MIT; commit 04977e15f3dfd6ee4b74c887dac3eb52665d6c92 (2026-11-11)",
+      "checkedAt": "2026-11-12",
+      "decision": "Research-only: reviewed the separated skill/verification approach; no source files copied."
+    },
+    {
+      "id": "hannsxpeter-humanizer",
+      "title": "hannsxpeter humanizer skill",
+      "url": "https://github.com/hannsxpeter/humanizer/tree/e8f1248a7d4919689c1f942e356ed95b102d9f07",
+      "kind": "open-source-skill",
+      "revision": "MIT; commit e8f1248a7d4919689c1f942e356ed95b102d9f07 (2026-10-08)",
+      "checkedAt": "2026-11-12",
+      "decision": "Research-only comparison of conservative voice-preserving editing; no pattern lists or prose copied."
+    },
+    {
+      "id": "hermes-skills",
+      "title": "Hermes Agent skills documentation",
+      "url": "https://github.com/hermes-agent-org/hermes/blob/main/website/docs/user-guide/features/skills.md",
+      "kind": "official-doc",
+      "revision": "Rolling repository page; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Hermes path/config is a host concern; this library does not ship Hermes agent configuration."
+    },
+    {
+      "id": "iart-motion",
+      "title": "iART motion-skills",
+      "url": "https://github.com/iart-ai/motion-skills/tree/ba94b7067684e349204242432e8bf6c4d634a8ca",
+      "kind": "open-source-skill",
+      "revision": "MIT; commit ba94b7067684e349204242432e8bf6c4d634a8ca (2026-11-11)",
+      "checkedAt": "2026-11-12",
+      "decision": "Research-only; no source text, scripts, or assets copied."
+    },
+    {
+      "id": "impeccable",
+      "title": "Impeccable frontend skill",
+      "url": "https://github.com/pbakaus/impeccable/tree/b4bff1626c344067788c2679f048a20057c7cc5a",
+      "kind": "open-source-skill",
+      "revision": "Apache-2.0; commit b4bff1626c344067788c2679f048a20057c7cc5a (2026-11-11)",
+      "checkedAt": "2026-11-12",
+      "decision": "Research-only: compared interface design workflow; no content or assets copied."
+    },
+    {
+      "id": "laravel",
+      "title": "Laravel documentation",
+      "url": "https://laravel.com/docs",
+      "kind": "official-doc",
+      "revision": "Version selector; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Select the installed major version."
+    },
+    {
+      "id": "madr",
+      "title": "MADR Architecture Decision Records",
+      "url": "https://adr.github.io/madr/",
+      "kind": "format-reference",
+      "revision": "Living project; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Format inspiration; no template text copied."
+    },
+    {
+      "id": "magnus-backend",
+      "title": "magnus919 backend engineering skill collection",
+      "url": "https://github.com/magnus919/agent-skills/tree/da4ce5c6823cce6da80f4e09c84998a4928402c1",
+      "kind": "open-source-skill",
+      "revision": "MIT; commit da4ce5c6823cce6da80f4e09c84998a4928402c1 (2026-11-08)",
+      "checkedAt": "2026-11-12",
+      "decision": "Research-only: compared backend scope and evidence practices; no text or code copied."
+    },
+    {
+      "id": "mblode-seo",
+      "title": "mblode SEO skills",
+      "url": "https://github.com/mblode/agent-skills/tree/402a666823ddf9b8cd9be76c3314b1119078ff01",
+      "kind": "open-source-skill",
+      "revision": "MIT; commit 402a666823ddf9b8cd9be76c3314b1119078ff01 (2026-11-10)",
+      "checkedAt": "2026-11-12",
+      "decision": "Research-only: compared topical coverage and external-tool assumptions; no text or code copied."
+    },
+    {
+      "id": "mcp",
+      "title": "Model Context Protocol specification",
+      "url": "https://modelcontextprotocol.io/specification/2026-07-28",
+      "kind": "standard",
+      "revision": "2026-07-28 spec; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Use the negotiated/current protocol version; security implications must be reviewed."
+    },
+    {
+      "id": "mdn-accessibility",
+      "title": "MDN Accessibility",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/Accessibility",
+      "kind": "official-doc",
+      "revision": "Living docs; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Practical browser and accessibility reference."
+    },
+    {
+      "id": "mermaid",
+      "title": "Mermaid documentation",
+      "url": "https://mermaid.js.org/",
+      "kind": "official-doc",
+      "revision": "Living docs; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Diagram syntax reference."
+    },
+    {
+      "id": "motionsites",
+      "title": "MotionSites Web Builder skill",
+      "url": "https://github.com/Motionsites-AI/claude-skill/tree/faa30d512e3973e58675c72101a7ef42ed37ae83",
+      "kind": "open-source-skill",
+      "revision": "Custom mixed notice: instructions/references/scripts MIT; examples and media excluded; commit faa30d512e3973e58675c72101a7ef42ed37ae83 (2026-10-26)",
+      "checkedAt": "2026-11-12",
+      "decision": "Research-only; no examples, prompt collection, videos, images, or scripts copied."
+    },
+    {
+      "id": "mysql84",
+      "title": "MySQL 8.4 Reference Manual",
+      "url": "https://dev.mysql.com/doc/refman/8.4/en/",
+      "kind": "official-doc",
+      "revision": "MySQL 8.4; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Check actual engine and deployed version."
+    },
+    {
+      "id": "n0an-ffmpeg",
+      "title": "n0an FFmpeg recipe skill",
+      "url": "https://github.com/n0an/ffmpeg-skill/tree/aec7706a3602134bfc606cc8a85eb010dfaa22ad",
+      "kind": "open-source-skill",
+      "revision": "MIT; commit aec7706a3602134bfc606cc8a85eb010dfaa22ad (2026-09-08)",
+      "checkedAt": "2026-11-12",
+      "decision": "Research-only comparison of recipe-oriented command guidance; no recipes, text, or code copied."
+    },
+    {
+      "id": "nextjs",
+      "title": "Next.js documentation",
+      "url": "https://nextjs.org/docs",
+      "kind": "official-doc",
+      "revision": "Living docs; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Versioned framework reference; check router and installed major."
+    },
+    {
+      "id": "node",
+      "title": "Node.js API documentation",
+      "url": "https://nodejs.org/api/",
+      "kind": "official-doc",
+      "revision": "Living docs; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Match the runtime release used by the target project."
+    },
+    {
+      "id": "npm-packaging",
+      "title": "npm package.json and package exports documentation",
+      "url": "https://docs.npmjs.com/cli/v11/configuring-npm/package-json",
+      "kind": "official-doc",
+      "revision": "npm CLI v11 docs; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Package metadata and export-map reference; align with the project's installed npm and Node versions."
+    },
+    {
+      "id": "openai-skill-format",
+      "title": "OpenAI skill authoring guide",
+      "url": "https://developers.openai.com/plugins/build/skills",
+      "kind": "official-doc",
+      "revision": "Living documentation; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Used to distinguish optional references, deterministic scripts, and reusable assets; avoid scripts when instructions and available tools suffice."
+    },
+    {
+      "id": "openai-skills",
+      "title": "OpenAI Skills documentation",
+      "url": "https://developers.openai.com/codex/skills",
+      "kind": "official-doc",
+      "revision": "Living docs; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Host-specific discovery and usage are treated separately from the cross-host package format."
+    },
+    {
+      "id": "openapi",
+      "title": "OpenAPI Specification",
+      "url": "https://spec.openapis.org/oas/",
+      "kind": "standard",
+      "revision": "Version index; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Select the version declared by the API; do not silently upgrade a contract."
+    },
+    {
+      "id": "opencode-skills",
+      "title": "OpenCode skills documentation",
+      "url": "https://opencode.ai/docs/skills",
+      "kind": "official-doc",
+      "revision": "Living docs; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Use only for OpenCode compatibility notes; verify current version at install time."
+    },
+    {
+      "id": "openssf",
+      "title": "OpenSSF resources",
+      "url": "https://openssf.org/",
+      "kind": "security-guidance",
+      "revision": "Living resources; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Assess the specific project, control, and artifact."
+    },
+    {
+      "id": "osi-mit",
+      "title": "The MIT License — Open Source Initiative",
+      "url": "https://opensource.org/license/mit",
+      "kind": "license",
+      "revision": "OSI-approved MIT License; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Selected for original Skillsmo-authored material; it does not relicense upstream materials or linked sources."
+    },
+    {
+      "id": "owasp-api",
+      "title": "OWASP API Security Top 10",
+      "url": "https://owasp.org/API-Security/",
+      "kind": "security-guidance",
+      "revision": "2023 edition currently linked; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Risk taxonomy and discovery aid, not a complete audit checklist."
+    },
+    {
+      "id": "owasp-cheatsheets",
+      "title": "OWASP Cheat Sheet Series",
+      "url": "https://cheatsheetseries.owasp.org/",
+      "kind": "security-guidance",
+      "revision": "Living docs; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Implementation reference; adapt to actual architecture."
+    },
+    {
+      "id": "owasp-genai",
+      "title": "OWASP GenAI Security Project",
+      "url": "https://genai.owasp.org/",
+      "kind": "security-guidance",
+      "revision": "Living project; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Threat discovery for AI and LLM applications; verify current publication."
+    },
+    {
+      "id": "php",
+      "title": "PHP documentation",
+      "url": "https://www.php.net/docs.php",
+      "kind": "official-doc",
+      "revision": "Living docs; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Match supported PHP runtime."
+    },
+    {
+      "id": "playwright",
+      "title": "Playwright documentation",
+      "url": "https://playwright.dev/docs/intro",
+      "kind": "official-doc",
+      "revision": "Living docs; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Browser automation and test behavior."
+    },
+    {
+      "id": "postgres",
+      "title": "PostgreSQL documentation",
+      "url": "https://www.postgresql.org/docs/current/",
+      "kind": "official-doc",
+      "revision": "Current version docs; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Use deployed major for behavior and syntax."
+    },
+    {
+      "id": "pytest",
+      "title": "pytest documentation",
+      "url": "https://docs.pytest.org/en/stable/",
+      "kind": "official-doc",
+      "revision": "Living docs; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Python test framework reference."
+    },
+    {
+      "id": "python",
+      "title": "Python documentation",
+      "url": "https://docs.python.org/3/",
+      "kind": "official-doc",
+      "revision": "Versioned docs; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Match the supported interpreter version."
+    },
+    {
+      "id": "react",
+      "title": "React documentation",
+      "url": "https://react.dev/learn",
+      "kind": "official-doc",
+      "revision": "Living docs; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Use installed version and local framework mode."
+    },
+    {
+      "id": "rfc9110",
+      "title": "HTTP Semantics, RFC 9110",
+      "url": "https://www.rfc-editor.org/rfc/rfc9110",
+      "kind": "standard",
+      "revision": "RFC 9110; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Normative HTTP semantics reference."
+    },
+    {
+      "id": "semrush-skills",
+      "title": "Semrush skill collection",
+      "url": "https://github.com/semrush/skills/tree/019ab369403c0e816707edae6194fa3bb47dfcd0",
+      "kind": "open-source-skill",
+      "revision": "Apache-2.0; commit 019ab369403c0e816707edae6194fa3bb47dfcd0 (2026-10-20)",
+      "checkedAt": "2026-11-12",
+      "decision": "Research-only; no proprietary MCP requirements, text, code, or data copied."
+    },
+    {
+      "id": "semver",
+      "title": "Semantic Versioning 2.0.0",
+      "url": "https://semver.org/",
+      "kind": "standard",
+      "revision": "2.0.0; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Public versioning specification."
+    },
+    {
+      "id": "skills-cli",
+      "title": "Vercel Skills CLI",
+      "url": "https://github.com/vercel-labs/skills/blob/e781cb4d07433dfe1d19e924ed45cc61738c55ec/docs/commands.md",
+      "kind": "tooling",
+      "revision": "Commit e781cb4d07433dfe1d19e924ed45cc61738c55ec; MIT; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Documents GitHub installation, `--skill`, `--agent`, and `--list`; commands remain untested against this private repository."
+    },
+    {
+      "id": "slsa",
+      "title": "SLSA specification",
+      "url": "https://slsa.dev/spec/v1.2/",
+      "kind": "security-standard",
+      "revision": "1.2; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Supply-chain build provenance reference; not a general security warranty."
+    },
+    {
+      "id": "social-video-editing",
+      "title": "Social Media Skills video editing skill",
+      "url": "https://github.com/social-media-skills/video-editing-skill/tree/f94d0517d717de281ee23569094aac616d32f4ef",
+      "kind": "open-source-skill",
+      "revision": "MIT; commit f94d0517d717de281ee23569094aac616d32f4ef (2026-11-11)",
+      "checkedAt": "2026-11-12",
+      "decision": "Research-only comparison of edit planning and review; no scripts, prompts, or assets copied."
+    },
+    {
+      "id": "supabase",
+      "title": "Supabase documentation",
+      "url": "https://supabase.com/docs",
+      "kind": "official-doc",
+      "revision": "Living docs; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Postgres, Auth, Storage, functions, and RLS reference."
+    },
+    {
+      "id": "taste",
+      "title": "Taste frontend skill",
+      "url": "https://github.com/Leonxlnx/taste-skill/tree/f6b76575f949707b4e3c37cd86cb44b0b98643e8",
+      "kind": "open-source-skill",
+      "revision": "MIT; commit f6b76575f949707b4e3c37cd86cb44b0b98643e8 (2026-11-07)",
+      "checkedAt": "2026-11-12",
+      "decision": "Research-only: reviewed workflow emphasis; no text, examples, code, palettes, or assets copied."
+    },
+    {
+      "id": "typescript",
+      "title": "TypeScript documentation",
+      "url": "https://www.typescriptlang.org/docs/",
+      "kind": "official-doc",
+      "revision": "Living docs; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Type-system reference; runtime checks still required."
+    },
+    {
+      "id": "uiux-pro-max",
+      "title": "UI UX Pro Max",
+      "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill/tree/6ae86f61f520d6ca229d2f40e070410638c908c5",
+      "kind": "open-source-skill",
+      "revision": "MIT repository; commit 6ae86f61f520d6ca229d2f40e070410638c908c5 (2026-11-10)",
+      "checkedAt": "2026-11-12",
+      "decision": "Research-only; no included design dataset, code, palette, or asset redistributed."
+    },
+    {
+      "id": "vite",
+      "title": "Vite documentation",
+      "url": "https://vite.dev/guide/",
+      "kind": "official-doc",
+      "revision": "Living docs; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Build, environment, plugin, and server reference."
+    },
+    {
+      "id": "voltagent-skills",
+      "title": "VoltAgent awesome-agent-skills index",
+      "url": "https://github.com/VoltAgent/awesome-agent-skills/tree/6d483e29da745a010d88974ef6d0e50d15755e9a",
+      "kind": "community-index",
+      "revision": "MIT index; commit 6d483e29da745a010d88974ef6d0e50d15755e9a (2026-11-05); listed packages may have separate licenses",
+      "checkedAt": "2026-11-12",
+      "decision": "Discovery only. Every candidate must be independently inspected; no catalog entries or skills copied."
+    },
+    {
+      "id": "w3c-motion",
+      "title": "W3C reduced motion technique C39",
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/css/C39",
+      "kind": "standard",
+      "revision": "WCAG 2.2 technique; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Motion safety reference; techniques are informative, not normative requirements by themselves."
+    },
+    {
+      "id": "wcag22",
+      "title": "W3C Web Content Accessibility Guidelines 2.2",
+      "url": "https://www.w3.org/TR/WCAG22/",
+      "kind": "standard",
+      "revision": "WCAG 2.2; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Normative criteria reference; Skillsmo does not claim conformance from partial checks."
+    },
+    {
+      "id": "webdev-forms",
+      "title": "web.dev Forms",
+      "url": "https://web.dev/learn/forms/",
+      "kind": "official-doc",
+      "revision": "Living docs; reviewed 2026-11-12",
+      "checkedAt": "2026-11-12",
+      "decision": "Form semantics and browser behavior reference."
+    }
+  ]
+}

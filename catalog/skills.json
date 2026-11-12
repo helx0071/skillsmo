@@ -1,0 +1,1370 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-12",
+  "repository": "helx0071/skillsmo",
+  "repositoryVisibility": "private",
+  "projectScope": "independent skills-only library",
+  "counts": {
+    "skills": 77,
+    "agentDefinitions": 0,
+    "hostEvaluated": 0
+  },
+  "maturityPolicy": "All packages remain experimental until trigger behavior and task outcomes are evaluated in a named host and version. Static checks do not establish behavioral compatibility.",
+  "installation": "After publication, preview with `npx skills add <owner>/skillsmo --list`, then install selected skills.",
+  "skills": [
+    {
+      "name": "accessibility-review",
+      "path": ".agents/skills/accessibility-review",
+      "category": "Accessibility",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Find reproducible barriers and propose fixes that preserve the task and user context.",
+      "sourceIds": [
+        "wcag22",
+        "mdn-accessibility",
+        "webdev-forms"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "agent-evaluation",
+      "path": ".agents/skills/agent-evaluation",
+      "category": "Agent workflows",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Measure observable behavior against a task-specific rubric without leaking expected answers.",
+      "sourceIds": [
+        "openai-skills",
+        "agent-skills-spec",
+        "skills-cli"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "agent-profile-design",
+      "path": ".agents/skills/agent-profile-design",
+      "category": "Agent workflows",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Make the configuration match its task while exposing its real permission and capability limits.",
+      "sourceIds": [
+        "opencode-skills",
+        "hermes-skills",
+        "agent-skills-spec"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "agent-skills-authoring",
+      "path": ".agents/skills/agent-skills-authoring",
+      "category": "Skill engineering",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Encode task-specific knowledge in a small package that an agent can discover and follow.",
+      "sourceIds": [
+        "agent-skills-spec",
+        "openai-skills",
+        "opencode-skills",
+        "hermes-skills"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "api-contracts",
+      "path": ".agents/skills/api-contracts",
+      "category": "API engineering",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Make request and response behavior explicit and evolvable.",
+      "sourceIds": [
+        "openapi",
+        "rfc9110"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "api-documentation",
+      "path": ".agents/skills/api-documentation",
+      "category": "API engineering",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Make an API understandable without inventing behavior or exposing private implementation details.",
+      "sourceIds": [
+        "openapi",
+        "rfc9110"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "api-testing",
+      "path": ".agents/skills/api-testing",
+      "category": "API engineering",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Find contract and trust-boundary failures with isolated, repeatable requests.",
+      "sourceIds": [
+        "openapi",
+        "rfc9110",
+        "owasp-api"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "app-store-release-preparation",
+      "path": ".agents/skills/app-store-release-preparation",
+      "category": "Mobile delivery",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Surface release blockers and make rollout decisions reviewable.",
+      "sourceIds": [
+        "expo",
+        "apple-store",
+        "google-play"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "architecture-diagrams",
+      "path": ".agents/skills/architecture-diagrams",
+      "category": "Architecture",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Represent system boundaries and relationships clearly without turning the diagram into an implementation inventory.",
+      "sourceIds": [
+        "c4",
+        "mermaid",
+        "madr"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "architecture-options",
+      "path": ".agents/skills/architecture-options",
+      "category": "Architecture",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Make trade-offs and unresolved assumptions visible before commitment.",
+      "sourceIds": [
+        "madr",
+        "postgres",
+        "mysql84",
+        "nextjs"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "auth-integration",
+      "path": ".agents/skills/auth-integration",
+      "category": "Security",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Integrate identity without confusing authentication with permissions or weakening account recovery.",
+      "sourceIds": [
+        "owasp-cheatsheets",
+        "supabase",
+        "convex",
+        "rfc9110"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "backend-authorization",
+      "path": ".agents/skills/backend-authorization",
+      "category": "Security",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Enforce least privilege on every protected operation.",
+      "sourceIds": [
+        "owasp-api",
+        "asvs",
+        "owasp-cheatsheets",
+        "supabase"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "backend-engineering",
+      "path": ".agents/skills/backend-engineering",
+      "category": "Backend and frameworks",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Deliver a backend change with explicit data authority, access rules, failure behavior, and operational evidence.",
+      "sourceIds": [
+        "magnus-backend",
+        "owasp-api",
+        "asvs",
+        "rfc9110",
+        "openapi"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "changelog-and-release",
+      "path": ".agents/skills/changelog-and-release",
+      "category": "Release engineering",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Describe user-visible changes accurately and keep version semantics consistent.",
+      "sourceIds": [
+        "semver",
+        "changelog",
+        "github-pr"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "code-review",
+      "path": ".agents/skills/code-review",
+      "category": "Code quality",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Report actionable defects with evidence while keeping review independent from implementation.",
+      "sourceIds": [
+        "github-pr",
+        "owasp-cheatsheets"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "codebase-research",
+      "path": ".agents/skills/codebase-research",
+      "category": "Repository understanding",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Build an evidence-backed map of relevant code without making unnecessary edits.",
+      "sourceIds": [
+        "git",
+        "github-pr"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "convex",
+      "path": ".agents/skills/convex",
+      "category": "Databases and backend",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Keep data access validated, authorization explicit, and reactive behavior consistent with the current Convex project.",
+      "sourceIds": [
+        "convex",
+        "owasp-api",
+        "owasp-cheatsheets"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "cross-runtime-packaging",
+      "path": ".agents/skills/cross-runtime-packaging",
+      "category": "Tooling and delivery",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Define supported environments and ship a package whose entry points, dependencies, and exports match that compatibility promise.",
+      "sourceIds": [
+        "node",
+        "typescript",
+        "npm-packaging",
+        "agent-skills-spec"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "decision-records",
+      "path": ".agents/skills/decision-records",
+      "category": "Architecture and planning",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Make the reasoning and consequences of an important decision clear to future contributors.",
+      "sourceIds": [
+        "madr",
+        "c4"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "delegation-design",
+      "path": ".agents/skills/delegation-design",
+      "category": "Agent workflows",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Reduce coordination cost while preserving clear ownership, shared interfaces, and integration checks.",
+      "sourceIds": [
+        "agent-skills-spec",
+        "opencode-skills",
+        "hermes-skills"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "dependency-and-supply-chain-audit",
+      "path": ".agents/skills/dependency-and-supply-chain-audit",
+      "category": "Security and reliability",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Identify material supply-chain risks and recommend fixes that can be verified without overstating scan coverage.",
+      "sourceIds": [
+        "openssf",
+        "slsa",
+        "npm-packaging",
+        "owasp-cheatsheets"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "dependency-mapping",
+      "path": ".agents/skills/dependency-mapping",
+      "category": "Architecture and planning",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Produce an evidence-backed map that shows important dependency direction and likely change impact.",
+      "sourceIds": [
+        "c4",
+        "mermaid",
+        "npm-packaging"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "design-system-implementation",
+      "path": ".agents/skills/design-system-implementation",
+      "category": "Frontend and accessibility",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Turn the product's visual and interaction rules into accessible, composable interface primitives.",
+      "sourceIds": [
+        "wcag22",
+        "mdn-accessibility",
+        "react",
+        "w3c-motion",
+        "taste",
+        "impeccable",
+        "hallmark",
+        "uiux-pro-max"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "expo-react-native",
+      "path": ".agents/skills/expo-react-native",
+      "category": "Mobile development",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Make mobile changes that match the installed Expo SDK and behave correctly on the target platforms.",
+      "sourceIds": [
+        "expo",
+        "react",
+        "typescript",
+        "apple-store",
+        "google-play"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "ffmpeg-media-workflow",
+      "path": ".agents/skills/ffmpeg-media-workflow",
+      "category": "Media and production",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Make a predictable media change from measured input properties and verify the produced output.",
+      "sourceIds": [
+        "ffmpeg-docs",
+        "ffmpeg-skill",
+        "ffmpeg-filters",
+        "n0an-ffmpeg",
+        "social-video-editing"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "flaky-test-diagnosis",
+      "path": ".agents/skills/flaky-test-diagnosis",
+      "category": "Testing and quality",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Find and correct the source of nondeterminism instead of hiding intermittent failures.",
+      "sourceIds": [
+        "playwright",
+        "pytest"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "frontend-design-quality",
+      "path": ".agents/skills/frontend-design-quality",
+      "category": "Frontend and accessibility",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Turn the user's intent and product constraints into a distinctive, accessible interface that works in the real codebase.",
+      "sourceIds": [
+        "taste",
+        "impeccable",
+        "hallmark",
+        "uiux-pro-max",
+        "motionsites",
+        "anthropic-frontend",
+        "wcag22",
+        "w3c-motion"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "frontend-forms",
+      "path": ".agents/skills/frontend-forms",
+      "category": "Frontend and accessibility",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Help people submit accurate information with minimal friction and understandable errors.",
+      "sourceIds": [
+        "webdev-forms",
+        "wcag22",
+        "mdn-accessibility"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "git-worktrees",
+      "path": ".agents/skills/git-worktrees",
+      "category": "Git and collaboration",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Keep branch and filesystem state explicit while avoiding accidental edits, commits, or cleanup of the wrong worktree.",
+      "sourceIds": [
+        "git"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "humanizer",
+      "path": ".agents/skills/humanizer",
+      "category": "Writing and editing",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Improve the reader's experience without inventing facts, flattening the author's voice, or optimizing for AI detectors.",
+      "sourceIds": [
+        "ameenmo-humanize",
+        "google-people-first",
+        "hannsxpeter-humanizer"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "implementation-planning",
+      "path": ".agents/skills/implementation-planning",
+      "category": "Planning and delivery",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Make the smallest plan that covers user outcomes, constraints, dependencies, validation, and rollback.",
+      "sourceIds": [
+        "madr",
+        "github-pr",
+        "agent-skills-spec"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "implementation-roadmaps",
+      "path": ".agents/skills/implementation-roadmaps",
+      "category": "Planning and delivery",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Make a roadmap that communicates outcomes, sequence, dependencies, and evidence without implying false certainty.",
+      "sourceIds": [
+        "madr",
+        "github-pr"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "incident-debugging",
+      "path": ".agents/skills/incident-debugging",
+      "category": "Reliability and operations",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Restore safe service while preserving evidence and separating mitigation from root-cause work.",
+      "sourceIds": [
+        "node",
+        "python",
+        "owasp-cheatsheets"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "laravel",
+      "path": ".agents/skills/laravel",
+      "category": "Backend and frameworks",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Fit the change to the installed Laravel version and use framework boundaries consistently.",
+      "sourceIds": [
+        "laravel",
+        "php",
+        "owasp-api",
+        "owasp-cheatsheets"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "license-and-provenance-review",
+      "path": ".agents/skills/license-and-provenance-review",
+      "category": "Curation and compliance",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Separate clearly licensed, restricted, missing, and unverified material so distribution decisions are evidence-based.",
+      "sourceIds": [
+        "agent-skills-spec",
+        "slsa",
+        "openssf"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "mcp-integration",
+      "path": ".agents/skills/mcp-integration",
+      "category": "AI and tool integration",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Keep protocol behavior explicit, permissions narrow, and external effects reviewable.",
+      "sourceIds": [
+        "mcp",
+        "owasp-genai",
+        "owasp-cheatsheets"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "migration-planning",
+      "path": ".agents/skills/migration-planning",
+      "category": "Planning and data",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Make migration steps reversible where possible and define how correctness will be established at each stage.",
+      "sourceIds": [
+        "mysql84",
+        "postgres",
+        "convex",
+        "supabase",
+        "laravel"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "mobile-navigation",
+      "path": ".agents/skills/mobile-navigation",
+      "category": "Mobile development",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Make route transitions predictable across normal use, deep links, app restarts, and platform back behavior.",
+      "sourceIds": [
+        "expo",
+        "react",
+        "apple-store",
+        "google-play"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "motion-design",
+      "path": ".agents/skills/motion-design",
+      "category": "Frontend and accessibility",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Use motion to explain state and hierarchy while keeping interaction responsive, accessible, and performant.",
+      "sourceIds": [
+        "w3c-motion",
+        "wcag22",
+        "iart-motion",
+        "motionsites"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "mysql",
+      "path": ".agents/skills/mysql",
+      "category": "Databases and backend",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Base database changes on the deployed MySQL version and protect correctness under concurrency and failure.",
+      "sourceIds": [
+        "mysql84",
+        "rfc9110"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "node-api-development",
+      "path": ".agents/skills/node-api-development",
+      "category": "Backend and frameworks",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Implement clear HTTP semantics with bounded resource use, safe input handling, and testable service boundaries.",
+      "sourceIds": [
+        "node",
+        "rfc9110",
+        "openapi",
+        "owasp-api"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "observability",
+      "path": ".agents/skills/observability",
+      "category": "Reliability and operations",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Produce actionable operational signals while limiting sensitive data and alert noise.",
+      "sourceIds": [
+        "node",
+        "python",
+        "owasp-cheatsheets"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "offline-first-data",
+      "path": ".agents/skills/offline-first-data",
+      "category": "Mobile and data",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Preserve user intent and data integrity across reconnects, duplicate delivery, and concurrent edits.",
+      "sourceIds": [
+        "convex",
+        "supabase",
+        "expo"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "performance-investigation",
+      "path": ".agents/skills/performance-investigation",
+      "category": "Reliability and performance",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Find the dominant measured cost and improve it without trading away correctness or accessibility.",
+      "sourceIds": [
+        "react",
+        "nextjs",
+        "vite",
+        "playwright",
+        "postgres",
+        "mysql84"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "playwright-e2e",
+      "path": ".agents/skills/playwright-e2e",
+      "category": "Testing and quality",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Cover critical user journeys with stable assertions that match observable behavior.",
+      "sourceIds": [
+        "playwright",
+        "wcag22"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "postgresql",
+      "path": ".agents/skills/postgresql",
+      "category": "Databases and backend",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Use PostgreSQL-specific behavior carefully and preserve data, access, and concurrency invariants.",
+      "sourceIds": [
+        "postgres",
+        "supabase",
+        "owasp-cheatsheets"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "project-delivery-orchestrator",
+      "path": ".agents/skills/project-delivery-orchestrator",
+      "category": "Planning and delivery",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Keep ownership, dependencies, evidence, and user-facing delivery status visible from start to finish.",
+      "sourceIds": [
+        "github-pr",
+        "git",
+        "agent-skills-spec"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "prompt-injection-review",
+      "path": ".agents/skills/prompt-injection-review",
+      "category": "AI security",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Find paths where untrusted content can influence privileged instructions, tool use, or sensitive data flow.",
+      "sourceIds": [
+        "owasp-genai",
+        "mcp",
+        "owasp-cheatsheets"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "pull-request-workflow",
+      "path": ".agents/skills/pull-request-workflow",
+      "category": "Git and collaboration",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Make the proposed change easy to review and ensure its evidence and scope are clear.",
+      "sourceIds": [
+        "github-pr",
+        "git"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "python-api-development",
+      "path": ".agents/skills/python-api-development",
+      "category": "Backend and frameworks",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Implement predictable HTTP behavior with explicit validation, authorization, resource bounds, and dependency handling.",
+      "sourceIds": [
+        "python",
+        "fastapi",
+        "openapi",
+        "rfc9110",
+        "owasp-api"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "react-nextjs",
+      "path": ".agents/skills/react-nextjs",
+      "category": "Frontend development",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Deliver a user-visible change that follows the installed framework's rendering and routing model.",
+      "sourceIds": [
+        "react",
+        "nextjs",
+        "typescript",
+        "wcag22"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "requirements-discovery",
+      "path": ".agents/skills/requirements-discovery",
+      "category": "Planning and product",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Turn an ambiguous request into a shared, testable description of the desired outcome.",
+      "sourceIds": [
+        "madr",
+        "openapi",
+        "agent-skills-spec"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "responsive-ui-review",
+      "path": ".agents/skills/responsive-ui-review",
+      "category": "Frontend and accessibility",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Identify concrete layout and interaction failures across supported screen sizes without mistaking taste for usability defects.",
+      "sourceIds": [
+        "wcag22",
+        "mdn-accessibility",
+        "playwright"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "rollback-planning",
+      "path": ".agents/skills/rollback-planning",
+      "category": "Reliability and operations",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Restore the previous safe user-facing behavior while protecting data and preserving diagnostic evidence.",
+      "sourceIds": [
+        "git",
+        "slsa",
+        "mysql84",
+        "postgres"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "runtime-adapter-authoring",
+      "path": ".agents/skills/runtime-adapter-authoring",
+      "category": "Tooling and architecture",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Keep shared behavior stable while isolating runtime differences behind a small, testable contract.",
+      "sourceIds": [
+        "node",
+        "python",
+        "typescript",
+        "mcp"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "schema-migration",
+      "path": ".agents/skills/schema-migration",
+      "category": "Databases and backend",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Preserve data integrity and application availability while moving schema and code through compatible states.",
+      "sourceIds": [
+        "mysql84",
+        "postgres",
+        "convex",
+        "supabase",
+        "laravel"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "secrets-handling",
+      "path": ".agents/skills/secrets-handling",
+      "category": "Security and reliability",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Minimize secret exposure and establish a safe lifecycle for credentials.",
+      "sourceIds": [
+        "owasp-cheatsheets",
+        "openssf",
+        "slsa"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "secure-code-review",
+      "path": ".agents/skills/secure-code-review",
+      "category": "Security and reliability",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Find actionable security issues in changed behavior and support each finding with code evidence and a realistic impact path.",
+      "sourceIds": [
+        "owasp-api",
+        "asvs",
+        "owasp-cheatsheets"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "security-review",
+      "path": ".agents/skills/security-review",
+      "category": "Security and reliability",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Produce a scoped risk picture that ties threat scenarios to actual controls and evidence.",
+      "sourceIds": [
+        "asvs",
+        "owasp-api",
+        "owasp-cheatsheets",
+        "owasp-genai"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "seo-content-brief",
+      "path": ".agents/skills/seo-content-brief",
+      "category": "Search and content quality",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Guide an original, useful page with clear audience value, evidence requirements, and search intent fit.",
+      "sourceIds": [
+        "google-search",
+        "google-people-first",
+        "google-spam",
+        "mblode-seo",
+        "semrush-skills",
+        "b12-agentic-seo"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "seo-structured-data",
+      "path": ".agents/skills/seo-structured-data",
+      "category": "Search and content quality",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Make structured data accurately describe visible page content and meet the applicable technical and policy requirements.",
+      "sourceIds": [
+        "google-structured-data",
+        "google-search",
+        "google-spam",
+        "b12-agentic-seo"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "seo-technical-audit",
+      "path": ".agents/skills/seo-technical-audit",
+      "category": "Search and content quality",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Identify verifiable technical barriers and opportunities without promising rankings or treating every tool warning as a defect.",
+      "sourceIds": [
+        "google-search",
+        "google-spam",
+        "google-structured-data",
+        "mblode-seo",
+        "semrush-skills",
+        "b12-agentic-seo"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "skill-and-agent-evaluation",
+      "path": ".agents/skills/skill-and-agent-evaluation",
+      "category": "Skill engineering",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Measure task outcomes, over-triggering, boundaries, and reproducibility without exposing expected answers.",
+      "sourceIds": [
+        "agent-skills-spec",
+        "skills-cli",
+        "openai-skills",
+        "opencode-skills"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "skill-curation",
+      "path": ".agents/skills/skill-curation",
+      "category": "Skill engineering",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Keep only useful, rights-reviewed capabilities and produce a focused original package with traceable evidence.",
+      "sourceIds": [
+        "agent-skills-spec",
+        "skills-cli",
+        "voltagent-skills",
+        "openai-skills"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "skillsmo-curation",
+      "path": ".agents/skills/skillsmo-curation",
+      "category": "Skill engineering",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Keep every package focused, original, source-traceable, installable, and accurately described.",
+      "sourceIds": [
+        "agent-skills-spec",
+        "skills-cli",
+        "openai-skills",
+        "opencode-skills",
+        "hermes-skills",
+        "voltagent-skills"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "source-research",
+      "path": ".agents/skills/source-research",
+      "category": "Research and provenance",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Answer the specific question with current, authoritative evidence and explicit limits.",
+      "sourceIds": [
+        "agent-skills-spec",
+        "google-search",
+        "owasp-api",
+        "node"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "supabase",
+      "path": ".agents/skills/supabase",
+      "category": "Databases and backend",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Keep database policies and server-side authorization aligned with the application's user and service roles.",
+      "sourceIds": [
+        "supabase",
+        "postgres",
+        "owasp-api",
+        "owasp-cheatsheets"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "tdd",
+      "path": ".agents/skills/tdd",
+      "category": "Testing and quality",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Use failing behavior tests to shape a minimal implementation and keep the intended contract visible.",
+      "sourceIds": [
+        "pytest",
+        "playwright",
+        "react"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "technical-documentation",
+      "path": ".agents/skills/technical-documentation",
+      "category": "Documentation",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Make instructions accurate, navigable, and verifiable for the intended reader.",
+      "sourceIds": [
+        "agent-skills-spec",
+        "openai-skills",
+        "github-pr"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "test-strategy",
+      "path": ".agents/skills/test-strategy",
+      "category": "Testing and quality",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Choose tests that provide useful evidence for the risks and user outcomes in scope.",
+      "sourceIds": [
+        "playwright",
+        "pytest",
+        "wcag22",
+        "owasp-api"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "threat-modeling",
+      "path": ".agents/skills/threat-modeling",
+      "category": "Security and reliability",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Turn system structure into testable threat scenarios and proportionate mitigations.",
+      "sourceIds": [
+        "owasp-api",
+        "asvs",
+        "owasp-genai",
+        "mcp"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "typescript",
+      "path": ".agents/skills/typescript",
+      "category": "Frontend and tooling",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Use types to clarify valid program states while retaining runtime checks for untrusted data.",
+      "sourceIds": [
+        "typescript",
+        "node",
+        "react"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "unit-integration-testing",
+      "path": ".agents/skills/unit-integration-testing",
+      "category": "Testing and quality",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Cover the behavior and its important boundaries with deterministic, maintainable tests.",
+      "sourceIds": [
+        "pytest",
+        "playwright",
+        "react"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "user-story-writing",
+      "path": ".agents/skills/user-story-writing",
+      "category": "Planning and product",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Describe user value and observable system behavior in a way that supports design and implementation.",
+      "sourceIds": [
+        "madr",
+        "openapi",
+        "agent-skills-spec"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "vite",
+      "path": ".agents/skills/vite",
+      "category": "Frontend and tooling",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Make Vite changes consistent with the installed version and the project's deployment model.",
+      "sourceIds": [
+        "vite",
+        "react",
+        "typescript"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "voice-preserving-editing",
+      "path": ".agents/skills/voice-preserving-editing",
+      "category": "Writing and editing",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Make the requested improvements with minimal voice and meaning drift.",
+      "sourceIds": [
+        "ameenmo-humanize",
+        "google-people-first",
+        "hannsxpeter-humanizer"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    },
+    {
+      "name": "wcag-accessibility-checks",
+      "path": ".agents/skills/wcag-accessibility-checks",
+      "category": "Accessibility",
+      "status": "experimental",
+      "hostEvaluation": "not performed",
+      "summary": "Report specific barriers with criterion context and evidence while avoiding unsupported conformance claims.",
+      "sourceIds": [
+        "wcag22",
+        "mdn-accessibility",
+        "webdev-forms"
+      ],
+      "references": [
+        "references/field-guide.md",
+        "references/source-notes.md"
+      ]
+    }
+  ],
+  "license": "MIT",
+  "licenseScope": "Skillsmo-authored content only; third-party materials remain under their own terms. See docs/licensing-and-attribution.md."
+}

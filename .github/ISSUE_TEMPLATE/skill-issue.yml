@@ -1,0 +1,44 @@
+name: Skill issue
+description: Report unclear guidance, a broken reference, stale advice, or a reproducible package problem
+title: "[Skill issue]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Report issues with Skillsmo skill packages. Do not include secrets, private user data, or proprietary project content.
+  - type: input
+    id: package
+    attributes:
+      label: Skill package
+      description: Give the exact package name or path under .agents/skills/.
+      placeholder: frontend-design-quality
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected guidance or behavior
+      description: What should the skill say or help the agent do?
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed issue
+      description: Quote only the smallest Skillsmo excerpt needed to explain the issue.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Host and version
+      description: Include the agent host, version, CLI version, and relevant project/runtime versions if known.
+    validations:
+      required: false
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: Provide safe, minimal steps or a sanitized example.
+    validations:
+      required: false

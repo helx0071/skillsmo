@@ -1,0 +1,44 @@
+name: Skill proposal
+description: Propose a focused task that the Skillsmo collection does not cover well
+title: "[Skill proposal]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Suggest a reusable task workflow, not an agent profile or team. Do not paste private project data or third-party skill text.
+  - type: textarea
+    id: task
+    attributes:
+      label: User task
+      description: What recurring outcome should a skill help an agent produce?
+      placeholder: Describe the task and who needs the result.
+    validations:
+      required: true
+  - type: textarea
+    id: trigger
+    attributes:
+      label: Activation context
+      description: When should an agent use this skill, and when should it not?
+    validations:
+      required: true
+  - type: textarea
+    id: coverage
+    attributes:
+      label: Existing coverage
+      description: Which current Skillsmo packages did you check? What gap remains?
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Research sources
+      description: Link official references and candidate repositories. Do not paste source text.
+    validations:
+      required: false
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected output and checks
+      description: What should completion look like, and how could it be evaluated?
+    validations:
+      required: true
