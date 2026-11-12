@@ -18,7 +18,7 @@ Skillsmo is an independent library of focused Agent Skills for recurring softwar
 
 ## Quick start
 
-After the repository is publicly available, preview the packages with the [Vercel Skills CLI](https://github.com/vercel-labs/skills):
+Preview the packages with the [Vercel Skills CLI](https://github.com/vercel-labs/skills):
 
 ```sh
 npx skills add helx0071/skillsmo --list
