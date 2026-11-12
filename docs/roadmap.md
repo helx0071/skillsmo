@@ -28,11 +28,11 @@
 
 ## Phase 2 — Static consistency checks
 
-**Status: implemented; verify the latest clean-history Actions run**
+**Status: implemented; latest public main validation passed**
 
 - [x] Add a dependency-free validator for frontmatter, package names/paths, SKILL.md line count, index/catalog agreement, source IDs, declared references, and local Markdown links.
 - [x] Add a GitHub Actions workflow for pull requests and pushes to main.
-- [ ] Record a successful run against the final public main commit.
+- [x] Confirm a clean-history workflow run passes on public main: [validation workflow](https://github.com/helx0071/skillsmo/actions/workflows/validate-skills.yml).
 - [ ] Observe a pull-request run and document any edge cases.
 
 **Acceptance:** inconsistent package/catalog/link changes fail with actionable messages. A green static check is not described as host compatibility or behavior quality.
