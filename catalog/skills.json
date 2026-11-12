@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "updatedAt": "2026-11-12",
   "repository": "helx0071/skillsmo",
-  "repositoryVisibility": "private",
+  "repositoryVisibility": "public",
   "projectScope": "independent skills-only library",
   "counts": {
     "skills": 77,
@@ -10,7 +10,7 @@
     "hostEvaluated": 0
   },
   "maturityPolicy": "All packages remain experimental until trigger behavior and task outcomes are evaluated in a named host and version. Static checks do not establish behavioral compatibility.",
-  "installation": "After publication, preview with `npx skills add <owner>/skillsmo --list`, then install selected skills.",
+  "installation": "Preview packages with `npx skills add helx0071/skillsmo --list`, then install selected skills.",
   "skills": [
     {
       "name": "accessibility-review",
