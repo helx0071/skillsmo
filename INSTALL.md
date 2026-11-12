@@ -35,14 +35,14 @@ Install only the skills relevant to the work. Large collections can contain over
 
 | Host | Documented route | Skillsmo status |
 |---|---|---|
-| Codex | Skills CLI target `codex`; Codex also documents its own skill discovery. | Listing and a copied install to a Codex target were verified in a disposable project. Task behavior remains untested. |
-| OpenCode | Skills CLI target `opencode`; OpenCode documents the shared skill format. | Intended route; runtime is not installed in the smoke environment. |
-| Claude Code | Skills CLI target `claude-code`. | Intended route; runtime is not installed in the smoke environment. |
+| Codex | Skills CLI target `codex`; Codex also documents its own skill discovery. | Listing and four copied package installs were verified in disposable projects. Task behavior remains blocked before model invocation. |
+| OpenCode | Skills CLI target `opencode`; OpenCode documents the shared skill format. | Intended route; runtime was unavailable in the cloud evaluation. |
+| Claude Code | Skills CLI target `claude-code`. | Intended route; runtime was unavailable in the cloud evaluation. |
 | Hermes Agent | Follow Hermes' current external skills directory and configuration instructions. | Research only; no Hermes-specific setup or install is included. |
 | Other compatible agents | Check the current CLI target list and the host's own skill-loading documentation. | Version and host dependent. |
 
 ## Verification status
 
-The public repository was listed through Vercel Skills CLI 1.8.1 with Node.js 24.22.1 and npm 11.9.0. The CLI found 77 packages and copied `frontend-design-quality` plus its field guide and source/rights notes into a disposable Codex-target project. See the [smoke report](docs/evaluation-runs/2026-11-12-public-install-smoke.md).
+The public repository was listed through Vercel Skills CLI 1.8.1 with Node.js 24.22.1 and npm 11.9.0. The CLI found 77 packages. The initial smoke copied `frontend-design-quality`; a follow-up cloud run copied that package plus `backend-engineering`, `seo-technical-audit`, and `humanizer`. All four copied `SKILL.md` files, declared references, and lock records were verified against the tested checkout. See the [initial smoke report](docs/evaluation-runs/2026-11-12-public-install-smoke.md) and [four-package cloud report](docs/evaluation-runs/2026-11-12-cloud-workspace-install-behavior.md).
 
-This verifies distribution and file transfer only. Codex task behavior could not be evaluated because the managed environment's Codex state database is read-only; OpenCode, Claude Code, and Hermes Agent runtimes were unavailable. All 77 packages remain experimental until trigger behavior and task outcomes are evaluated in named hosts and versions.
+This verifies catalog discovery and file transfer only. The Codex task attempt was blocked before model invocation because the managed environment's state database was read-only; skill loading and behavior were not observed. OpenCode, Claude Code, and Hermes Agent were unavailable. All 77 packages remain experimental until trigger behavior and task outcomes are evaluated in named hosts and versions.
