@@ -15,7 +15,8 @@
 | Research register | 74 source records. |
 | Static validation | Implemented at `scripts/validate-skills.mjs`. Checks package metadata, catalog and source consistency, declared references, and relative Markdown links. |
 | Continuous integration | The latest clean-history run on public `main` passed. See the [validation workflow](https://github.com/helx0071/skillsmo/actions/workflows/validate-skills.yml). |
-| Host verification | Zero Skillsmo packages have a recorded install and task evaluation in a named host/version. |
+| Distribution smoke check | Vercel Skills CLI 1.8.1 listed 77 packages and copied one selected package plus references to a disposable Codex target. See the [run record](evaluation-runs/2026-11-12-public-install-smoke.md). |
+| Host behavior verification | Zero Skillsmo packages have a recorded task evaluation in a named host/version. |
 | Distribution | [Repository is public](https://github.com/helx0071/skillsmo). Installation uses the external Vercel Skills CLI; Skillsmo does not ship an npm CLI or runtime. |
 | Release activity | Clean root history is published. No versioned release or tag has been created. |
 
@@ -28,17 +29,18 @@
 - Added a dependency-free repository validator and a pull-request/push workflow.
 - Replaced the previous reachable history with a verified clean root commit after enabling GitHub's private email setting. The three pre-clean-history Actions runs were deleted before publication.
 - Published the repository and reconciled the public catalog, implementation status, roadmap, and release checklist.
-- Confirmed a successful validator run on the clean public main history.
+- Confirmed successful validator runs on the clean public main history.
+- Smoke-tested public listing, Codex-target package copying, reference files, and lock tracking in a disposable project.
 
 ## Still open
 
-### Distribution smoke check
+### Host behavior evaluation
 
-Run `npx skills add helx0071/skillsmo --list` and install representative packages in disposable projects. Record the CLI and host versions, selected packages, observed results, and limitations. Direct repository installation and skills.sh indexing are separate outcomes.
+No host installations have a recorded task behavior evaluation. The Codex CLI was present, but its task attempt stopped before model invocation because the managed environment's Codex state database was read-only. OpenCode, Claude Code, and Hermes Agent runtimes were not available. Retry in writable host environments and record exact host/version, trigger behavior, reference loading, available tools, task result, evidence, and limitations. See the [evaluation run guide](evaluation-runs/README.md) and [current smoke report](evaluation-runs/2026-11-12-public-install-smoke.md).
 
-### Host evaluation
+### Registry indexing
 
-No host installations or behavioral evaluations are recorded. Evaluate representative packages in suitable versions of Codex, OpenCode, Claude Code, and Hermes Agent. Record each host/version, install route, trigger behavior, reference loading, available tools, task result, evidence, and limitations before changing any compatibility claim. All packages remain experimental.
+The Skills CLI can list and install directly from GitHub. Skillsmo's listing on skills.sh or another registry has not been checked; registry indexing is a separate outcome.
 
 ### Future package work
 
