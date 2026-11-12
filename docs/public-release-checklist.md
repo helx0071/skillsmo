@@ -13,10 +13,11 @@ This checklist tracks release preparation for the independent Skillsmo skills li
 - The repository-level validator and GitHub Actions workflow are present. Clean-history validation runs passed on the public main branch.
 - Main descends from the reviewed root commit, which has no parent and uses GitHub's privacy-preserving commit identity. No prior history is reachable through the published branch.
 - GitHub reports one branch, `main`. No tags or versioned releases were created.
-- The three pre-clean-history Actions runs were permanently deleted. At this checklist audit, all eight clean-history runs (runs 4–11) had passed; the live workflow page records subsequent runs.
+- The three pre-clean-history Actions runs were permanently deleted. At the release audit, all ten clean-history runs visible through the latest documentation updates passed.
 - GitHub's private email setting is enabled.
 - The public repository page displays the Skillsmo README, MIT license, About description, and project topics.
-- No agent definitions or runtime are included. Host installation and behavior evaluations remain unperformed; all packages remain experimental.
+- The public Skills CLI listing and copied install smoke check passed for one selected package. See the [run record](evaluation-runs/2026-11-12-public-install-smoke.md).
+- No agent definitions or runtime are included. Host behavior evaluations remain unperformed; all packages remain experimental.
 - No artifact-listing response was available, so no artifact-level scan is claimed.
 
 ## Release preparation
@@ -30,16 +31,11 @@ This checklist tracks release preparation for the independent Skillsmo skills li
 - [x] Change repository visibility to public.
 - [x] Re-fetch the public repository and verify its visibility, main branch, README, MIT license, About description, and topics.
 - [x] Confirm successful clean-history validation on public main.
-- [ ] Run `npx skills add helx0071/skillsmo --list` and representative install smoke checks in disposable projects.
-- [ ] Record Node, CLI, and host versions, selected skills, observed results, and limitations.
+- [x] Run the CLI listing and representative copied install smoke check in a disposable project.
+- [x] Record Node, CLI, and host-runtime availability, selected package, observed results, and limitations.
+- [ ] Run named-host behavior evaluations and record trigger, reference-loading, and task outcomes.
+- [ ] Check skills.sh indexing separately from direct GitHub installation.
 
-## Post-publication installation smoke checks
+## Post-publication smoke record
 
-Next steps:
-
-1. List packages with `npx skills add helx0071/skillsmo --list` and compare with [SKILL_INDEX.md](../SKILL_INDEX.md).
-2. Install a representative skill to Codex and OpenCode in disposable projects.
-3. Inspect installed folders and confirm references resolve.
-4. Verify discovery and task behavior in fresh sessions for each named host/version.
-5. Evaluate Claude Code and Hermes Agent separately before making compatibility claims.
-6. Check skills.sh indexing separately; direct repository installation and registry indexing are different outcomes.
+The CLI listed 77 skills and copied `frontend-design-quality`, including both references, to a disposable Codex-target directory. The `skills list` command showed the install as tracked. The Codex task attempt was blocked before model invocation by the managed environment's read-only state database; this is not a behavior result. See the [full evaluation record](evaluation-runs/2026-11-12-public-install-smoke.md) and [evaluation guide](evaluation-runs/README.md).
