@@ -13,7 +13,7 @@ This checklist tracks release preparation for the independent Skillsmo skills li
 - The repository-level validator and GitHub Actions workflow are present. Clean-history validation runs passed on the public main branch.
 - Main descends from the reviewed root commit, which has no parent and uses GitHub's privacy-preserving commit identity. No prior history is reachable through the published branch.
 - GitHub reports one branch, `main`. No tags or versioned releases were created.
-- The three pre-clean-history Actions runs were permanently deleted. At the release audit, all ten clean-history runs visible through the latest documentation updates passed.
+- The three pre-clean-history Actions runs were permanently deleted. The first ten clean-history runs from the public-release audit all passed; later smoke-report edits are covered by the live workflow.
 - GitHub's private email setting is enabled.
 - The public repository page displays the Skillsmo README, MIT license, About description, and project topics.
 - The public Skills CLI listing and copied install smoke check passed for one selected package. See the [run record](evaluation-runs/2026-11-12-public-install-smoke.md).
