@@ -16,8 +16,7 @@ This checklist tracks release preparation for the independent Skillsmo skills li
 - The three pre-clean-history Actions runs were permanently deleted. The first ten clean-history runs from the public-release audit all passed; later smoke-report edits are covered by the live workflow.
 - GitHub's private email setting is enabled.
 - The public repository page displays the Skillsmo README, MIT license, About description, and project topics.
-- The public Skills CLI listing and copied install smoke check passed for one selected package. See the [run record](evaluation-runs/2026-11-12-public-install-smoke.md).
-- No agent definitions or runtime are included. Host behavior evaluations remain unperformed; all packages remain experimental.
+- No agent definitions or runtime are included. No task behavior result has been completed; all packages remain experimental.
 - No artifact-listing response was available, so no artifact-level scan is claimed.
 
 ## Release preparation
@@ -31,11 +30,13 @@ This checklist tracks release preparation for the independent Skillsmo skills li
 - [x] Change repository visibility to public.
 - [x] Re-fetch the public repository and verify its visibility, main branch, README, MIT license, About description, and topics.
 - [x] Confirm successful clean-history validation on public main.
-- [x] Run the CLI listing and representative copied install smoke check in a disposable project.
-- [x] Record Node, CLI, and host-runtime availability, selected package, observed results, and limitations.
+- [x] Run the CLI listing and representative copied install smoke check in disposable projects; the follow-up cloud run verified four packages and catalog name parity.
+- [x] Record Node, CLI, host-runtime availability, selected packages, observed results, and limitations.
 - [ ] Run named-host behavior evaluations and record trigger, reference-loading, and task outcomes.
 - [ ] Check skills.sh indexing separately from direct GitHub installation.
 
 ## Post-publication smoke record
 
-The CLI listed 77 skills and copied `frontend-design-quality`, including both references, to a disposable Codex-target directory. The `skills list` command showed the install as tracked. The Codex task attempt was blocked before model invocation by the managed environment's read-only state database; this is not a behavior result. See the [full evaluation record](evaluation-runs/2026-11-12-public-install-smoke.md) and [evaluation guide](evaluation-runs/README.md).
+The initial CLI smoke listed 77 skills and copied `frontend-design-quality`, including both references, to a disposable Codex-target directory. The `skills list` command showed the install as tracked. Its Codex task attempt was blocked before model invocation by the managed environment's read-only state database; this was not a behavior result. See the [initial smoke report](evaluation-runs/2026-11-12-public-install-smoke.md) and [evaluation guide](evaluation-runs/README.md).
+
+The follow-up cloud run matched all 77 CLI names to the catalog and copy-installed `frontend-design-quality`, `backend-engineering`, `seo-technical-audit`, and `humanizer`, verifying their references and lock records. The Codex UI task again stopped before model invocation; the other prepared tasks were not run. See the [cloud evaluation report](evaluation-runs/2026-11-12-cloud-workspace-install-behavior.md).
