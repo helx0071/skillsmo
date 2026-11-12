@@ -5,16 +5,16 @@
 
 ## Phase 0 — Clean public release
 
-**Status: blocked on clean history and exact commit metadata**
+**Status: completed**
 
-- [ ] Review every reachable ref for removed project material, credentials, and private content.
-- [ ] Create a clean-history candidate containing only the approved Skillsmo tree.
-- [ ] Ensure every candidate commit uses an address approved for public display.
-- [ ] Review the candidate tree, all refs, and exact commit metadata before updating main.
-- [ ] Change visibility after the clean-history and metadata checks.
-- [ ] Verify the public README, About metadata, license, source register, and install instructions.
+- [x] Review the approved release tree and remove access to the previous main history.
+- [x] Enable GitHub's private email setting and use the privacy-preserving identity for the clean root commit.
+- [x] Delete workflow runs that referred to the previous history.
+- [x] Verify the clean root commit and confirm only the clean main history is reachable.
+- [x] Publish the repository and verify GitHub reports its visibility as public.
+- [x] Reconcile the package catalog and release documentation with the public state.
 
-**Acceptance:** the public repository contains only the reviewed Skillsmo tree and history. No private material or unapproved personal contact data is reachable.
+**Acceptance:** the public repository contains the reviewed Skillsmo tree and clean reachable history. No previous branch or tag ref remains. Host behavior and installation checks are tracked separately below.
 
 ## Phase 1 — Package usefulness and structure
 
@@ -28,11 +28,11 @@
 
 ## Phase 2 — Static consistency checks
 
-**Status: implemented; main validation run passed**
+**Status: implemented; verify the latest clean-history Actions run**
 
 - [x] Add a dependency-free validator for frontmatter, package names/paths, SKILL.md line count, index/catalog agreement, source IDs, declared references, and local Markdown links.
 - [x] Add a GitHub Actions workflow for pull requests and pushes to main.
-- [x] Confirm the workflow completes successfully on main: [Actions run 43213173070](https://github.com/helx0071/skillsmo/actions/runs/43213173070).
+- [ ] Record a successful run against the final public main commit.
 - [ ] Observe a pull-request run and document any edge cases.
 
 **Acceptance:** inconsistent package/catalog/link changes fail with actionable messages. A green static check is not described as host compatibility or behavior quality.
